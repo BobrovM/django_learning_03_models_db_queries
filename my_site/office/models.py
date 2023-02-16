@@ -10,4 +10,5 @@ class Patient(models.Model):
     average_heartrate = models.IntegerField(default=-1, validators=[MinValueValidator(-1), MaxValueValidator(300)])
 
     def __str__(self):
-        return f"{self.first_name} {self.last_name} is {self.age} years old."
+        return f"{self.first_name} {self.last_name} is {self.age} years old and has an average " \
+               f"heartrate of {self.average_heartrate} bpm."
